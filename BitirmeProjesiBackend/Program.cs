@@ -55,8 +55,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("All");
+//app.UseCors("All");
+
+app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllers();
 
@@ -64,5 +67,5 @@ app.Run();
 
 void GetDbContextOptions(DbContextOptionsBuilder builder)
 {
-    builder.UseSqlServer("server=(localdb)\\mssqllocaldb; database=ArcelikDb; integrated security=true;");
+    builder.UseSqlServer("server=(localdb)\\mssqllocaldb; database=BitirmeBackend; integrated security=true;");
 }
