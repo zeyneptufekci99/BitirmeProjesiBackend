@@ -22,6 +22,7 @@ namespace BitirmeProjesiBackend.Migrations
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Point = table.Column<int>(type: "int", nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Quota = table.Column<int>(type: "int", nullable: false),
                     Longitude = table.Column<int>(type: "int", nullable: false),
                     Latitude = table.Column<int>(type: "int", nullable: false)

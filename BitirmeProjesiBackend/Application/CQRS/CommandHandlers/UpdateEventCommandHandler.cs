@@ -29,7 +29,8 @@ namespace BitirmeProjesiBackend.Application.CQRS.CommandHandlers
                 updatedEvent.Latitude = request.Latitude;
                 updatedEvent.Quota = request.Quota;
                 updatedEvent.Longitude = request.Longitude;
-
+                updatedEvent.Type = request.Type;
+               
                 await _context.SaveChangesAsync();
             }
 

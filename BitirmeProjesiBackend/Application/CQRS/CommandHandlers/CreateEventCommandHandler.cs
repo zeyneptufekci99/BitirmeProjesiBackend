@@ -27,6 +27,8 @@ namespace BitirmeProjesiBackend.Application.CQRS.CommandHandlers
             createdMovie.Quota = request.Quota;
             createdMovie.Longitude = request.Longitude;
             createdMovie.Latitude = request.Latitude;
+            createdMovie.Type = request.Type;
+     
 
             await _context.Events.AddAsync(createdMovie);
             await _context.SaveChangesAsync();

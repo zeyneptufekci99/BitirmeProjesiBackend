@@ -25,6 +25,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
                 Explanation = x.Explanation,
                 Director=x.Director,
                 Point=x.Point,
+                Type = x.Type,
                 StartDate = x.StartDate,
                 Quota = x.Quota,
                 Longitude = x.Longitude,

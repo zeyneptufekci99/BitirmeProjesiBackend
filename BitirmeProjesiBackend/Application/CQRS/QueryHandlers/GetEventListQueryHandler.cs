@@ -22,6 +22,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
                 Name = x.Name,
                 ImageUrl = x.ImageUrl,
                 Explanation = x.Explanation,
+                Type= x.Type,
                 Director = x.Director,
                 Point = x.Point,
                 StartDate = x.StartDate,
