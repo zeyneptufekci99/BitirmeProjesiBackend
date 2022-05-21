@@ -7,5 +7,6 @@ namespace BitirmeProjesiBackend.Application.Dtos
         public int UserId { get; set; }
         public int EventId { get; set; }
         public DateTime Date { get; set; }
+        public string Username { get; set; } = String.Empty;
     }
 }

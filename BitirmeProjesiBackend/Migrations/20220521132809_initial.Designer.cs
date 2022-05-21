@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BitirmeProjesiBackend.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220516203249_initial")]
+    [Migration("20220521132809_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

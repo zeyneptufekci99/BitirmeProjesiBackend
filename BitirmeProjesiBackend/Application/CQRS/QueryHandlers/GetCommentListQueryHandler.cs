@@ -16,15 +16,8 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
         }
         public async Task<List<CommentDto>> Handle(GetCommentListQuery request, CancellationToken cancellationToken)
         {
-            var result = await _context.Comments.AsNoTracking().Select(x => new CommentDto
-            {
-                Id = x.Id,
-                Content = x.Content,
-                UserId=x.UserId,
-                EventId=x.EventId,
-                Date=x.Date,
-
-            }).ToListAsync();
+            var result = await _context.Comments.Join(_context.Users, comment => comment.UserId, user => user.Id, (comment, user) => new { user, comment })
+               .Select(x => new CommentDto { Id = x.comment.Id, Date = x.comment.Date, EventId = x.comment.EventId, UserId = x.comment.UserId, Content = x.comment.Content, Username = x.user.Username }).ToListAsync();
 
             return result;
         }
