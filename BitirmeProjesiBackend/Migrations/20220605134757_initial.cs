@@ -19,6 +19,7 @@ namespace BitirmeProjesiBackend.Migrations
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Explanation = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Director = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Donated = table.Column<int>(type: "int", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Point = table.Column<int>(type: "int", nullable: false),
@@ -38,7 +39,7 @@ namespace BitirmeProjesiBackend.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Definition = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -18,7 +18,9 @@ namespace BitirmeProjesiBackend
             claims.Add(new Claim(ClaimTypes.Role,userDto.RoleDefinition));
             claims.Add(new Claim(ClaimTypes.NameIdentifier,userDto.Id.ToString()));
             claims.Add(new Claim("username", userDto.Username));
-
+            claims.Add(new Claim("name", userDto.Name));
+            claims.Add(new Claim("roleId", userDto.RoleDefinition));
+            claims.Add(new Claim("userId", userDto.Id.ToString()));
             JwtSecurityToken token = new JwtSecurityToken(issuer:JwtInfo.Issuer
                 ,audience:JwtInfo.Audience,claims :claims, notBefore:DateTime.UtcNow, expires:DateTime.UtcNow.AddDays(15),signingCredentials: credentials);
             JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();

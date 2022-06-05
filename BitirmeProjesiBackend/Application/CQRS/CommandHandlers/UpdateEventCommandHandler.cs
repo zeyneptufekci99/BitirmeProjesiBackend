@@ -30,6 +30,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.CommandHandlers
                 updatedEvent.Quota = request.Quota;
                 updatedEvent.Longitude = request.Longitude;
                 updatedEvent.Type = request.Type;
+                updatedEvent.Donated = request.Donated;
                
                 await _context.SaveChangesAsync();
             }

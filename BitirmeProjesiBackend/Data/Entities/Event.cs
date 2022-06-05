@@ -7,6 +7,7 @@
         public string ImageUrl { get; set; }=String.Empty;
         public string Explanation { get; set; }=String.Empty;
         public string Director { get; set; }=String.Empty;
+        public int Donated { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Point { get; set; }

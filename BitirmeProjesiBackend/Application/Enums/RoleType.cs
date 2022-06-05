@@ -4,5 +4,6 @@
     {
         User = 1,
         Admin = 2,
+        Donor =3,
     }
 }

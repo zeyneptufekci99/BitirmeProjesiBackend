@@ -19,7 +19,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
         public async Task<UserDto?> Handle(CheckUserQuery request, CancellationToken cancellationToken)
         {
             // lazy, eagle, explicit
-           var user = await _context.Users.Select(x=> new UserDto
+           var user = await _context.Users.Include(x => x.Role).Select(x=> new UserDto
            {
                Id = x.Id,
                Name = x.Name,
@@ -28,6 +28,8 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
                Username=x.Username,
                Email = x.Email,
                RoleId = x.RoleId,
+               RoleDefinition = x.Role.Definition,
+
 
            }).AsNoTracking().SingleOrDefaultAsync(x=>x.Username == request.Username && x.Password == request.Password);
 

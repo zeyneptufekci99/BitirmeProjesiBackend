@@ -64,6 +64,9 @@ namespace BitirmeProjesiBackend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Donated")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
@@ -111,7 +114,7 @@ namespace BitirmeProjesiBackend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Definition")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

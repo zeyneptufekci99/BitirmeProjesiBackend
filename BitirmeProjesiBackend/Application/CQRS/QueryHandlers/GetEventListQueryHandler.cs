@@ -26,13 +26,18 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
                 Director = x.Director,
                 Point = x.Point,
                 StartDate = x.StartDate,
+                EndDate = x.EndDate,
                 Quota = x.Quota,
                 Longitude = x.Longitude,
                 Latitude = x.Latitude,
+                Donated = x.Donated,
 
             }).ToListAsync();
 
             return result;
+
+
+
         }
     }
 }

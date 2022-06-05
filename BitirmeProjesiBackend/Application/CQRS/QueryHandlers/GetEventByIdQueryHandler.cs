@@ -30,7 +30,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
                 Quota = x.Quota,
                 Longitude = x.Longitude,
                 Latitude = x.Latitude,
-
+                Donated = x.Donated,
             }).SingleOrDefaultAsync(x => x.Id == request.Id);
 
             return result;

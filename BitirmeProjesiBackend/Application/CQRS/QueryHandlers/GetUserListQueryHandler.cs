@@ -19,6 +19,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
 
         public async Task<List<UserDto>> Handle(GetUserListQuery request, CancellationToken cancellationToken)
         {
+
             var userList = await _context.Users.OfType<User>().Select(x => new UserDto
             {
                 Id = x.Id,
@@ -31,6 +32,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
             }).AsNoTracking().ToListAsync();
 
             return userList;
+
         }
     }
 }
