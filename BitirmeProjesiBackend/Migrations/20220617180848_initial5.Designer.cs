@@ -4,6 +4,7 @@ using BitirmeProjesiBackend.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BitirmeProjesiBackend.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20220617180848_initial5")]
+    partial class initial5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,11 +80,11 @@ namespace BitirmeProjesiBackend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("Latitude")
-                        .HasColumnType("real");
+                    b.Property<int>("Latitude")
+                        .HasColumnType("int");
 
-                    b.Property<float>("Longitude")
-                        .HasColumnType("real");
+                    b.Property<int>("Longitude")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()

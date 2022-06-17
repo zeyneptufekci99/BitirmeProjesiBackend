@@ -15,7 +15,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.Commands
         public int Point { get; set; }
         public int Quota { get; set; }
        
-        public int Longitude { get; set; }
-        public int Latitude { get; set; }
+        public float Longitude { get; set; }
+        public float Latitude { get; set; }
     }
 }

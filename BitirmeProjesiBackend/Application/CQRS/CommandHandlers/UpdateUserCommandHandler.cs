@@ -25,6 +25,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.CommandHandlers
                 updatedUser.Email = request.Email;
                 updatedUser.Password = request.Password;
                 updatedUser.RoleId = request.RoleId;
+                updatedUser.Point = request.Point;
                 _context.SaveChanges();
             }
 

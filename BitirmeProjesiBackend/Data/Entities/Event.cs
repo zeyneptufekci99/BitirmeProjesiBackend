@@ -14,8 +14,8 @@
         public string Type { get; set; } = String.Empty;
         public int Quota { get; set; }
         public List<Comment>? Comments { get; set; } = new List<Comment>();
-        public int Longitude { get; set; }
-        public int Latitude { get; set; }
+        public float Longitude { get; set; }
+        public float Latitude { get; set; }
         public List<Ticket>? Tickets { get; set; }
     }
 }

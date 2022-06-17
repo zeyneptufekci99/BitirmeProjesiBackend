@@ -29,6 +29,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
                 Username = x.Username,
                 Email = x.Email,
                 RoleId = x.RoleId,
+                Point = x.Point,
             }).AsNoTracking().ToListAsync();
 
             return userList;

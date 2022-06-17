@@ -26,6 +26,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.QueryHandlers
                 Username = x.Username,
                 Email = x.Email,
                 RoleId = x.RoleId,
+                Point = x.Point,
             }).SingleOrDefaultAsync(p => p.Id == request.Id);
 
 

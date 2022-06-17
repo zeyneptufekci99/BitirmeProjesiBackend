@@ -24,6 +24,7 @@ namespace BitirmeProjesiBackend.Application.CQRS.CommandHandlers
             createdUser.Password = request.Password;
             createdUser.RoleId = request.RoleId;
             createdUser.Email = request.Email;
+            createdUser.Point = request.Point;
             await _context.Users.AddAsync(createdUser);
             await _context.SaveChangesAsync();
 
